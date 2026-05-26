@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import Lenis from "lenis";
 import { Navbar } from "@/components/landing/navbar";
 import { Footer } from "@/components/landing/footer";
+import { AuroraBackground } from "@/components/landing/aurora-background";
 
 export default function LandingLayout({
   children,
@@ -29,10 +30,11 @@ export default function LandingLayout({
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50 text-slate-900 overflow-x-hidden selection:bg-emerald-500 selection:text-white">
+    <AuroraBackground className="text-slate-900 selection:bg-emerald-500 selection:text-white">
       <Navbar />
       <main className="flex-1 pt-20">{children}</main>
       <Footer />
-    </div>
+    </AuroraBackground>
   );
 }
+
